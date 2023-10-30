@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open Multiple Tabs and Search Example</title>
+  </head>
+  <body>
+    <button onclick="openTabs()">Open Multiple Tabs and Search</button>
+
+    <script>
+      function openTabs() {
+        // URLs to open in new tabs
+        const urls = [
+          "https://www.bing.com/search?q=Global+warming+solutions",
+          "https://www.bing.com/search?q=Home+workout+routines",
+          "https://www.bing.com/search?q=How+to+invest+in+stocks",
+          "https://www.bing.com/search?q=Best+online+learning+platforms",
+          "https://www.bing.com/search?q=Relationship+advice+for+couples",
+          "https://www.bing.com/search?q=Tech+gadgets+for+2023",
+          "https://www.bing.com/search?q=Self-care+practices",
+          "https://www.bing.com/search?q=Environmental+conservation+efforts",
+          "https://www.bing.com/search?q=2023+movie+releases",
+          "https://www.bing.com/search?q=Cybersecurity+tips+for+individuals",
+          "https://www.bing.com/search?q=Parenting+in+the+digital+age",
+          "https://www.bing.com/search?q=Artificial+intelligence+in+healthcare",
+          "https://www.bing.com/search?q=Latest+gaming+consoles",
+          "https://www.bing.com/search?q=Travel+restrictions+and+guidelines",
+          "https://www.bing.com/search?q=Financial+planning+for+retirement",
+          "https://www.bing.com/search?q=Sustainable+fashion+brands",
+          "https://www.bing.com/search?q=Popular+TikTok+challenges",
+          "https://www.bing.com/search?q=Eco-friendly+home+products",
+          "https://www.bing.com/search?q=Effective+time+management+techniques",
+          "https://www.bing.com/search?q=How+to+start+a+small+business",
+        ];
+
+        // Function to open tabs with a delay
+        function openTabWithDelay(index) {
+          if (index < urls.length) {
+            window.open(urls[index], "_blank");
+            setTimeout(function () {
+              openTabWithDelay(index + 1);
+            }, 2000); // Open the next tab after a 1-second delay
+          }
+        }
+
+        openTabWithDelay(0); // Start opening tabs from the first URL
+      }
+    </script>
+  </body>
+</html>
